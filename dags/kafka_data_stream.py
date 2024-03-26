@@ -3,12 +3,11 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 import json
 import requests
-
-def get_data():
+from kafka import KafkaProducer
+def get_data_api():
     res = requests.get("https://randomuser.me/api/")
     res = res.json()
     res = res['results'][0]
-    
     return res
 
 def format_data(res):
@@ -32,7 +31,7 @@ def format_data(res):
 
 def stream_data():
 
-    res = get_data()
+    res = get_data_api()
     res = format_data(res)
     print(json.dumps(res, indent=3))
     
