@@ -13,6 +13,7 @@ The architecture involves:
 -   Apache Spark: The data wrangler, transforming and preparing the data for storage 🛠️
 -   Apache Cassandra: The data vault, storing the processed user data securely 💾
 
+![Architecture](arc.png "Architecture")
 
 ### Components 🧩
 
