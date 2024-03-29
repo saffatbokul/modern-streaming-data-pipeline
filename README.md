@@ -3,7 +3,7 @@
 
 ### Overview 🚀
 
-This project demonstrates a data streaming pipeline where Apache Airflow ingests data from an API and sen, processes it using Apache Spark, and persists it in Apache Cassandra. It's like a data highway, with each component playing a crucial role in the smooth flow of information!
+This project demonstrates a data streaming pipeline where Apache Airflow fetches data from an API and sends it the Kafka topic. Apache Spark then reads the user data from Kafka and processes and writes it to a Cassandra NOSQL database. It's like a data highway, with each component playing a crucial role in the smooth flow of information!
 
 ### Architecture 🌐
 
@@ -13,13 +13,6 @@ The architecture involves:
 -   Apache Spark: The data wrangler, transforming and preparing the data for storage 🛠️
 -   Apache Cassandra: The data vault, storing the processed user data securely 💾
 
-### Data Flow
-
-The data flow in the project can be summarized as follows:
-
--   Apache Airflow fetches user data from a random user API and sends it to a Kafka topic.
--   Kafka ingests the user data from the topic.
--   Apache Spark reads the user data from Kafka, processes it, and writes it to a Cassandra database.
 
 ### Components 🧩
 
@@ -31,11 +24,11 @@ The data flow in the project can be summarized as follows:
 ### Installation and Usage 🚀
 
 -   Install Docker 🐳
--   Clone the repo: `git clone https://github.com/saffat/Kafka-Airflow-Spark-Cassandra`
+-   Clone the repo: `git clone https://github.com/saffatbokul/modern-streaming-data-pipeline`
 -   Build and run Docker images: `docker-compose up -d`
 
 ### Conclusion 🎉
 
-This project is a data streaming dream team! It showcases how Airflow, Kafka, Spark, and Cassandra work together to automate complex data processing and storage tasks. It's like having a data management superpower, ensuring real-time insights and efficient data handling. 🚀📝 Kafka-Airflow-Spark-Cassandra 🪐
------------------------------------
+This project is a data streaming dream team! It showcases how Airflow, Kafka, Spark, and Cassandra work together to automate complex data processing and storage tasks. It's like having a data management superpower, ensuring real-time insights and efficient data handling. 
+
 
